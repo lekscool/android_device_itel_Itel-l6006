@@ -4,6 +4,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
@@ -17,9 +18,9 @@ PRODUCT_BRAND := Itel
 PRODUCT_MODEL := itel L6006
 PRODUCT_MANUFACTURER := itel
 
-PRODUCT_GMS_CLIENTID_BASE := android-transsion
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE=itel L6006 \
+    PRODUCT_NAME=itel-L6006 \
     PRIVATE_BUILD_DESC="L6006-SU385-10-RU-V021-20230214"
 
 BUILD_FINGERPRINT := Itel/SU385RU/itel-L6006:10/QP1A.190711.020/RU-V021-20230214:user/release-keys
